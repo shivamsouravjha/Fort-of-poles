@@ -84,7 +84,9 @@ h6 { font-size: 16px;}
 	text-align: center;
 	align-content: center;
 	min-height: 10em;
-
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
 }
 
 .intro-wrapper{
@@ -105,6 +107,18 @@ h6 { font-size: 16px;}
 	;
 }
 
+.container {
+  height: 100px;
+  position: center;
+} 
+.center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 .nav-wrapper{
 	border-radius:5px 5px 0 0;
@@ -348,6 +362,7 @@ h6 { font-size: 16px;}
 	color:#4b5156;
 	font-size: 14px;
 }
+
 
 
 #contact-form{
