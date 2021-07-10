@@ -311,8 +311,13 @@ h6 { font-size: 16px;}
 
 #skills{
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	background-color: var(--previewShadow);
+}
+
+#sum{
+    max-width:50%;
+    height:300px;
 }
 
 .social-links{
