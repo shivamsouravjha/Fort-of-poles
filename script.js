@@ -39,16 +39,24 @@ function setTheme(mode){
 	localStorage.setItem('theme', mode)
 }
 var slideIndex = 1;
+var blogIndex = 1;
 showSlides(slideIndex);
+showBlogs(blogIndex);
 
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+function plusBlogs(n) {
+  showBlogs(blogIndex += n);
+}
 
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
+}
+function currentBlog(n) {
+  showBlogs(blogIndex = n);
 }
 
 function showSlides(n) {
@@ -65,4 +73,20 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+function showBlogs(n) {
+  var i;
+  var blogs = document.getElementsByClassName("myBlogs");
+  var dots = document.getElementsByClassName("dot");
+  if (n > blogs.length) {blogIndex = 1}
+  if (n < 1) {blogIndex = blogs.length}
+  for (i = 0; i < blogs.length; i++) {
+      blogs[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  blogs[blogIndex-1].style.display = "block";
+  dots[blogIndex-1].className += " active";
 }
