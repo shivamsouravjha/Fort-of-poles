@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <button id="rzp-button1">Pay</button><script src="https://checkout.razorpay.com/v1/checkout.js"></script><script>var options = {    "key": "rzp_test_L9E5YYWk8frfxK", // Enter the Key ID generated from the Dashboard    "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise    "currency": "INR",    "name": "Acme Corp",    "description": "Test Transaction",    "image": "https://example.com/your_logo",    "order_id": "id:order_JdS9By9IcykL1p", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1    "handler": function (response){        alert(response.razorpay_payment_id);        alert(response.razorpay_order_id);        alert(response.razorpay_signature)    },    "prefill": {        "name": "Gaurav Kumar",        "email": "gaurav.kumar@example.com",        "contact": "9999999999"    },    "notes": {        "address": "Razorpay Corporate Office"    },    "theme": {        "color": "#3399cc"    }};var rzp1 = new Razorpay(options);rzp1.on('payment.failed', function (response){        alert(response.error.code);        alert(response.error.description);        alert(response.error.source);        alert(response.error.step);        alert(response.error.reason);        alert(response.error.metadata.order_id);        alert(response.error.metadata.payment_id);});document.getElementById('rzp-button1').onclick = function(e){    rzp1.open();    e.preventDefault();}</script>
 
 	<section class="s1">
 
@@ -440,8 +441,35 @@
 		<div class="main-container">
 			<h3 style="text-align: center;">Blogs I've written</h3>
 			<div class="post-wrapper slideshow-container">
-
-
+                <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"							src="https://miro.medium.com/max/750/1*dvYSY9qOkpfAhG1HcwW9wA.png">
+						<div class="post-preview">
+							<h6 class="post-title">RabbitMQ: A Bridge between Micro-Services Part-1</h6>
+							<p class="post-intro">Using RabbitMQ to connect Micro-services in GOlang.</p>
+							<a href="https://medium.com/@ShivamSouravJha./rabbitmq-a-bridge-between-micro-services-part-1-6f9bb41a0b4c">Read More</a>
+						</div>
+					</div>
+				</div>
+                 <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"	src="https://miro.medium.com/max/875/1*Yq9gOsaSGO90Fw2d-L_YUA.png">
+						<div class="post-preview">
+							<h6 class="post-title">Building MutualFund data via Zerodha’s API</h6>
+							<p class="post-intro">About using nodejs and Zerodha's api to build catalogue of mutual funds.</p>
+							<a href="https://medium.com/@ShivamSouravJha./building-mutualfund-data-via-zerodhas-api-4529786cf04c">Read More</a>
+						</div>
+					</div>
+				</div>
+                <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"							src="https://miro.medium.com/max/875/1*nKbTJmtSQVCHtCaw8HfbWg.jpeg">
+						<div class="post-preview">
+							<h6 class="post-title">Probably how a Stock Trading platform works</h6>
+							<p class="post-intro">Talked how a stock trade app functioning would look like.</p>							<a href="https://medium.com/@2019145/probably-how-a-stock-trading-platform-works-bd12f92fb8c9">Read More</a>
+						</div>
+					</div>
+				</div>	
 				<div class="container">
 					<div class="myBlogs center">
 						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*8X7P5eyO0wOAttCHS2f_Bg.jpeg">
@@ -452,15 +480,7 @@
 						</div>
 					</div>
 				</div>
-                <div class="container">
-					<div class="myBlogs center">
-						<img class="thumbnail"							src="https://miro.medium.com/max/875/1*nKbTJmtSQVCHtCaw8HfbWg.jpeg">
-						<div class="post-preview">
-							<h6 class="post-title">Probably how a Stock Trading platform works</h6>
-							<p class="post-intro">Talked how a stock trade app functioning would look like.</p>							<a href="https://medium.com/@2019145/probably-how-a-stock-trading-platform-works-bd12f92fb8c9">Read More</a>
-						</div>
-					</div>
-				</div>		
+                	
                 <div class="container">
 					<div class="myBlogs center">
 						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*Izh_ONCTR6iDIWBpc8BXaw.jpeg">
@@ -470,13 +490,24 @@
 							<a href="https://tech.trell.co/creator-space-the-customized-portfolio-for-creators-product-overview-66dcd6da877c">Read More</a>
 						</div>
 					</div>
-				</div><div class="container">
+				</div>
+                <div class="container">
 					<div class="myBlogs center">
-						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*8X7P5eyO0wOAttCHS2f_Bg.jpeg">
+						<img class="thumbnail"							src="https://miro.medium.com/max/750/1*dvYSY9qOkpfAhG1HcwW9wA.png">
+						<div class="post-preview">
+							<h6 class="post-title">RabbitMQ: A Bridge between Micro-Services Part-1</h6>
+							<p class="post-intro">Using RabbitMQ to connect Micro-services in GOlang.</p>
+							<a href="https://medium.com/@ShivamSouravJha./rabbitmq-a-bridge-between-micro-services-part-1-6f9bb41a0b4c">Read More</a>
+						</div>
+					</div>
+				</div>
+                 <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"	src="https://miro.medium.com/max/875/1*Yq9gOsaSGO90Fw2d-L_YUA.png">
 						<div class="post-preview">
 							<h6 class="post-title">Building MutualFund data via Zerodha’s API</h6>
 							<p class="post-intro">About using nodejs and Zerodha's api to build catalogue of mutual funds.</p>
-							<a href="https://miro.medium.com/max/875/1*Yq9gOsaSGO90Fw2d-L_YUA.png">Read More</a>
+							<a href="https://medium.com/@ShivamSouravJha./building-mutualfund-data-via-zerodhas-api-4529786cf04c">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -488,45 +519,8 @@
 							<p class="post-intro">Talked how a stock trade app functioning would look like.</p>							<a href="https://medium.com/@2019145/probably-how-a-stock-trading-platform-works-bd12f92fb8c9">Read More</a>
 						</div>
 					</div>
-				</div>		
-                <div class="container">
-					<div class="myBlogs center">
-						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*Izh_ONCTR6iDIWBpc8BXaw.jpeg">
-						<div class="post-preview">
-							<h6 class="post-title">Creator-Space</h6>
-							<p class="post-intro">The customized portfolio for creators | Product Overview.</p>
-							<a href="https://tech.trell.co/creator-space-the-customized-portfolio-for-creators-product-overview-66dcd6da877c">Read More</a>
-						</div>
-					</div>
-				</div><div class="container">
-					<div class="myBlogs center">
-						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*8X7P5eyO0wOAttCHS2f_Bg.jpeg">
-						<div class="post-preview">
-							<h6 class="post-title">Building MutualFund data via Zerodha’s API</h6>
-							<p class="post-intro">About using nodejs and Zerodha's api to build catalogue of mutual funds.</p>
-							<a href="https://miro.medium.com/max/875/1*Yq9gOsaSGO90Fw2d-L_YUA.png">Read More</a>
-						</div>
-					</div>
-				</div>
-                <div class="container">
-					<div class="myBlogs center">
-						<img class="thumbnail"							src="https://miro.medium.com/max/875/1*nKbTJmtSQVCHtCaw8HfbWg.jpeg">
-						<div class="post-preview">
-							<h6 class="post-title">Probably how a Stock Trading platform works</h6>
-							<p class="post-intro">Talked how a stock trade app functioning would look like.</p>							<a href="https://medium.com/@2019145/probably-how-a-stock-trading-platform-works-bd12f92fb8c9">Read More</a>
-						</div>
-					</div>
-				</div>		
-                <div class="container">
-					<div class="myBlogs center">
-						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*Izh_ONCTR6iDIWBpc8BXaw.jpeg">
-						<div class="post-preview">
-							<h6 class="post-title">Creator-Space</h6>
-							<p class="post-intro">The customized portfolio for creators | Product Overview.</p>
-							<a href="https://tech.trell.co/creator-space-the-customized-portfolio-for-creators-product-overview-66dcd6da877c">Read More</a>
-						</div>
-					</div>
-				</div><div class="container">
+				</div>	
+				<div class="container">
 					<div class="myBlogs center">
 						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*8X7P5eyO0wOAttCHS2f_Bg.jpeg">
 						<div class="post-preview">
@@ -536,15 +530,7 @@
 						</div>
 					</div>
 				</div>
-                <div class="container">
-					<div class="myBlogs center">
-						<img class="thumbnail"							src="https://miro.medium.com/max/875/1*nKbTJmtSQVCHtCaw8HfbWg.jpeg">
-						<div class="post-preview">
-							<h6 class="post-title">Probably how a Stock Trading platform works</h6>
-							<p class="post-intro">Talked how a stock trade app functioning would look like.</p>							<a href="https://medium.com/@2019145/probably-how-a-stock-trading-platform-works-bd12f92fb8c9">Read More</a>
-						</div>
-					</div>
-				</div>		
+                	
                 <div class="container">
 					<div class="myBlogs center">
 						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*Izh_ONCTR6iDIWBpc8BXaw.jpeg">
@@ -555,6 +541,57 @@
 						</div>
 					</div>
 				</div>
+                <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"							src="https://miro.medium.com/max/750/1*dvYSY9qOkpfAhG1HcwW9wA.png">
+						<div class="post-preview">
+							<h6 class="post-title">RabbitMQ: A Bridge between Micro-Services Part-1</h6>
+							<p class="post-intro">Using RabbitMQ to connect Micro-services in GOlang.</p>
+							<a href="https://medium.com/@ShivamSouravJha./rabbitmq-a-bridge-between-micro-services-part-1-6f9bb41a0b4c">Read More</a>
+						</div>
+					</div>
+				</div>
+                 <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"	src="https://miro.medium.com/max/875/1*Yq9gOsaSGO90Fw2d-L_YUA.png">
+						<div class="post-preview">
+							<h6 class="post-title">Building MutualFund data via Zerodha’s API</h6>
+							<p class="post-intro">About using nodejs and Zerodha's api to build catalogue of mutual funds.</p>
+							<a href="https://medium.com/@ShivamSouravJha./building-mutualfund-data-via-zerodhas-api-4529786cf04c">Read More</a>
+						</div>
+					</div>
+				</div>
+                <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"							src="https://miro.medium.com/max/875/1*nKbTJmtSQVCHtCaw8HfbWg.jpeg">
+						<div class="post-preview">
+							<h6 class="post-title">Probably how a Stock Trading platform works</h6>
+							<p class="post-intro">Talked how a stock trade app functioning would look like.</p>							<a href="https://medium.com/@2019145/probably-how-a-stock-trading-platform-works-bd12f92fb8c9">Read More</a>
+						</div>
+					</div>
+				</div>	
+				<div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*8X7P5eyO0wOAttCHS2f_Bg.jpeg">
+						<div class="post-preview">
+							<h6 class="post-title">POV: Building the Creator-Space</h6>
+							<p class="post-intro">Explained the system design of Creator-Space backend made at Trell.</p>
+							<a href="https://tech.trell.co/pov-building-the-creator-space-6d193cc8725f">Read More</a>
+						</div>
+					</div>
+				</div>
+                	
+                <div class="container">
+					<div class="myBlogs center">
+						<img class="thumbnail"							src="https://miro.medium.com/max/1400/1*Izh_ONCTR6iDIWBpc8BXaw.jpeg">
+						<div class="post-preview">
+							<h6 class="post-title">Creator-Space</h6>
+							<p class="post-intro">The customized portfolio for creators | Product Overview.</p>
+							<a href="https://tech.trell.co/creator-space-the-customized-portfolio-for-creators-product-overview-66dcd6da877c">Read More</a>
+						</div>
+					</div>
+				</div>
+               
 				<a class="prev" onclick="plusBlogs(-1)">&#10094;</a>
 				<a class="next" onclick="plusBlogs(1)">&#10095;</a>
 			</div>
