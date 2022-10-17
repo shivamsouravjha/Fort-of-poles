@@ -311,9 +311,18 @@ h6 { font-size: 1rem;}
 
 #skills{
 	display: flex;
-	justify-content: space-around;
+	justify-content:space-around;
 	flex-wrap: wrap;
 	background-color: var(--previewShadow);
+	margin: auto;
+
+}
+#skills img{
+	display: block;
+	max-width: 100%;
+	margin-top: 10px;	
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #skills ul{
@@ -329,7 +338,7 @@ h6 { font-size: 1rem;}
 #sum{
     max-width:60%;
     height:300px;
-		object-fit: cover;
+	object-fit: cover;
 }
 
 .social-links{
@@ -516,6 +525,20 @@ h6 { font-size: 1rem;}
 		display: none;
 	}
 
+}
+@media screen and (max-width: 810px){
+	#sum{
+		max-width:60%;
+		height:200px;
+		object-fit: cover;
+	}
+}
+@media screen and (max-width:600px){
+	#sum{
+		max-width:60%;
+		height:150px;
+		object-fit: cover;
+	}
 }
 
 
